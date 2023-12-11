@@ -1,10 +1,10 @@
 {
-  "item.planete216.dodo_egg": "Dodo Spawn Egg",
-  "item.planete216.yellow_fern_bundle": "Yellow Fern Bundle",
+  "item.planete216.dodoegg": "Dodo Spawn Egg",
+  "item.planete216.yellowfernbundle": "Yellow Fern Bundle",
 
   "block.planete216.coarse_palm_grass_block": "Coarse Palm grass Block",
   "block.planete216.yellow_fern": "Yellow Fern",
 
   "creativetab.e216_natural_blocks": "E216 Natural Blocks",
-  "creativetab.e216_creatures": "E216 Creatures"
+  "creativetab.creatures": "E216 Creatures"
 }

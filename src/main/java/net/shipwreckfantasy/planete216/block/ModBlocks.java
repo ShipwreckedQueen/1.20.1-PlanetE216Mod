@@ -2,9 +2,7 @@ package net.shipwreckfantasy.planete216.block;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -21,9 +19,9 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> COARSEPALMGRASSBLOCK = registerBlock("coarse_palm_grass_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)));
+            () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> YELLOWFERN = registerBlock("yellow_fern",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS)));
+            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

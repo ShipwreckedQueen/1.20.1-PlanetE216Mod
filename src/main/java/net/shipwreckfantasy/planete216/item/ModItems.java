@@ -11,9 +11,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, PLANETE216.MOD_ID);
 
-    public static final RegistryObject<Item> DODOEGG = ITEMS.register("dodo_egg",
+    public static final RegistryObject<Item> DODOEGG = ITEMS.register("dodoegg",
             () -> new Item(new Item.Properties().stacksTo(15)));
-    public static final RegistryObject<Item> YELLOWFERNBUNDLE = ITEMS.register("yellow_fern_bundle",
+    public static final RegistryObject<Item> YELLOWFERNBUNDLE = ITEMS.register("yellowfernbundle",
             () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {

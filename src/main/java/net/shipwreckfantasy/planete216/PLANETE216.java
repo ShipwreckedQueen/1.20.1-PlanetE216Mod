@@ -25,7 +25,7 @@ import org.slf4j.Logger;
 public class PLANETE216
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "planet_e216";
+    public static final String MOD_ID = "planete216";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 

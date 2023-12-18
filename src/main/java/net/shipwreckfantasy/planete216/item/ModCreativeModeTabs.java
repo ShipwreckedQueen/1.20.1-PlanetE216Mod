@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.YELLOWFERNBUNDLE.get());
 
                         pOutput.accept(ModBlocks.COARSEPALMGRASSBLOCK.get());
+                        pOutput.accept(ModBlocks.COARSEPALMDIRTBLOCK.get());
                         pOutput.accept(ModBlocks.YELLOWFERN.get());
                     })
                     .build());

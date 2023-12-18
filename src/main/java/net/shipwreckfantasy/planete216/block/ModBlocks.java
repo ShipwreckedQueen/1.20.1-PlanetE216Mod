@@ -19,7 +19,10 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> COARSEPALMGRASSBLOCK = registerBlock("coarse_palm_grass_block",
-            () -> new GrassBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> COARSEPALMDIRTBLOCK = registerBlock("coarse_palm_dirt_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).noOcclusion()));
     public static final RegistryObject<Block> YELLOWFERN = registerBlock("yellow_fern",
             () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)));
 

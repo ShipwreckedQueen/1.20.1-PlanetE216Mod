@@ -15,13 +15,11 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PLANETE216.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> E216_NATURAL_BLOCKS = E126_CREATIVE_MODE_TAB.register("e216_natural_blocks",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.COARSEPALMGRASSBLOCK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.YELLOWFERN.get()))
                     .title(Component.translatable("creativetab.e216_natural_blocks"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.YELLOWFERNBUNDLE.get());
 
-                        pOutput.accept(ModBlocks.COARSEPALMGRASSBLOCK.get());
-                        pOutput.accept(ModBlocks.COARSEPALMDIRTBLOCK.get());
                         pOutput.accept(ModBlocks.YELLOWFERN.get());
                     })
                     .build());

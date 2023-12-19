@@ -32,6 +32,14 @@ public class ModCreativeModeTabs {
                     })
                     .build());
 
+    public static final RegistryObject<CreativeModeTab> E216_BULDING_BLOCKS = E126_CREATIVE_MODE_TAB.register("e216_buidling_blocks",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.METALPORTALBLOCK.get()))
+                    .title(Component.translatable("creativetab.building"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModBlocks.METALPORTALBLOCK.get());
+                    })
+                    .build());
+
 
     public static void register(IEventBus eventBus) {
         E126_CREATIVE_MODE_TAB.register(eventBus);

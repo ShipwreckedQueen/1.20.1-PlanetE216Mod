@@ -17,9 +17,11 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, PLANETE216.MOD_ID);
 
-
     public static final RegistryObject<Block> YELLOWFERN = registerBlock("yellow_fern",
             () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)));
+
+    public static final RegistryObject<Block> METALPORTALBLOCK = registerBlock("portal_frame_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

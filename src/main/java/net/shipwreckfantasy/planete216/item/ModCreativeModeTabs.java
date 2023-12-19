@@ -19,6 +19,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.e216_natural_blocks"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.YELLOWFERNBUNDLE.get());
+                        pOutput.accept(ModItems.PORTALSHARDS.get());
 
                         pOutput.accept(ModBlocks.YELLOWFERN.get());
                     })

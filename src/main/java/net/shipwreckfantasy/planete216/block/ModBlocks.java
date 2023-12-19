@@ -21,7 +21,7 @@ public class ModBlocks {
             () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)));
 
     public static final RegistryObject<Block> METALPORTALBLOCK = registerBlock("portal_frame_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

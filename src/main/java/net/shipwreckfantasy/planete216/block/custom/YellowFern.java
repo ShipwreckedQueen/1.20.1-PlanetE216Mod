@@ -7,10 +7,11 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class yellow_fern extends Block implements net.minecraftforge.common.IPlantable {
-    public yellow_fern(BlockBehaviour.Properties pProperties) {
+public class YellowFern extends Block implements net.minecraftforge.common.IPlantable {
+    public YellowFern(BlockBehaviour.Properties pProperties) {
         super(pProperties);
     }
 
@@ -18,10 +19,8 @@ public class yellow_fern extends Block implements net.minecraftforge.common.IPla
         return pState.is(BlockTags.DIRT) || pState.is(Blocks.FARMLAND);
     }
 
-    private static final VoxelShape SHAPE = Block.box(0, 0, 0, 16, 9, 16);
-
-    public static VoxelShape getSHAPE() {
-        return SHAPE;
+    public VoxelShape getShape(BlockState p_273399_, BlockGetter p_273568_, BlockPos p_273314_, CollisionContext p_273274_) {
+        return Block.box(0.0D, 0.0D, 0.0D, 15.0D, 9.0D, 15.0D);
     }
 
     @Override

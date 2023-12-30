@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shipwreckfantasy.planete216.PLANETE216;
+import net.shipwreckfantasy.planete216.block.custom.YellowFern;
 import net.shipwreckfantasy.planete216.item.ModItems;
 
 import java.util.function.Supplier;
@@ -18,7 +19,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, PLANETE216.MOD_ID);
 
     public static final RegistryObject<Block> YELLOWFERN = registerBlock("yellow_fern",
-            () -> new BushBlock(BlockBehaviour.Properties.copy(Blocks.GRASS)));
+            () -> new YellowFern(BlockBehaviour.Properties.copy(Blocks.GRASS)));
 
     public static final RegistryObject<Block> METALPORTALBLOCK = registerBlock("portal_frame_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f)));

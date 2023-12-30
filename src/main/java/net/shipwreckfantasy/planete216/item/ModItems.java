@@ -19,6 +19,9 @@ public class ModItems {
     public static final RegistryObject<Item> PORTALSHARDS = ITEMS.register("portal_shards",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> PORTALCORE = ITEMS.register("portal_core",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

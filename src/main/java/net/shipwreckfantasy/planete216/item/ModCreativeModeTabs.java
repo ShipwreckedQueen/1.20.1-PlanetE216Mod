@@ -38,6 +38,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.building"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.METALPORTALBLOCK.get());
+                        pOutput.accept(ModBlocks.PORTALCOREBLOCK.get());
                     })
                     .build());
 

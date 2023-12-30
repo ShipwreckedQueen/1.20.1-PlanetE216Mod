@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shipwreckfantasy.planete216.PLANETE216;
+import net.shipwreckfantasy.planete216.block.custom.PortalCoreBlock;
 import net.shipwreckfantasy.planete216.block.custom.YellowFern;
 import net.shipwreckfantasy.planete216.item.ModItems;
 
@@ -23,6 +24,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> METALPORTALBLOCK = registerBlock("portal_frame_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f)));
+
+    public static final RegistryObject<Block> PORTALCOREBLOCK = registerBlock("portal_core_block",
+            () -> new PortalCoreBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f).sound(SoundType.GLASS)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

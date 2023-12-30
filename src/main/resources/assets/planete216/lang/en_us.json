@@ -2,10 +2,10 @@
   "item.planete216.dodoegg": "Dodo Spawn Egg",
   "item.planete216.yellowfernbundle": "Yellow Fern Bundle",
   "item.planete216.portal_shards": "Dimensional Shards",
-  "item.planete216.portal_core": "Portal Core",
 
   "block.planete216.yellow_fern": "Yellow Fern",
   "block.planete216.portal_frame_block": "Portal Iron Block",
+  "block.planete216.portal_core_block": "Portal Core",
 
   "creativetab.e216_natural_blocks": "E216 Natural Blocks",
   "creativetab.creatures": "E216 Creatures",

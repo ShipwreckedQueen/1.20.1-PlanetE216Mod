@@ -9,14 +9,12 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.shipwreckfantasy.planete216.block.ModBlocks;
-import net.shipwreckfantasy.planete216.entity.ModEntity;
+import net.shipwreckfantasy.planete216.entity.ModEntities;
 import net.shipwreckfantasy.planete216.item.ModCreativeModeTabs;
 import net.shipwreckfantasy.planete216.item.ModItems;
 import org.slf4j.Logger;
@@ -40,7 +38,7 @@ public class PLANETE216
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        ModEntity.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
 

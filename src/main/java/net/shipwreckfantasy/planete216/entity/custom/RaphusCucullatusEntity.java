@@ -8,11 +8,17 @@ import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.shipwreckfantasy.planete216.entity.ModEntities;
 import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.core.animatable.instance.InstancedAnimatableInstanceCache;
+import software.bernie.geckolib.core.animatable.instance.SingletonAnimatableInstanceCache;
+import software.bernie.geckolib.core.animation.AnimatableManager;
 
-public class RaphusCucullatusEntity extends Animal {
+
+public class RaphusCucullatusEntity extends Animal implements GeoEntity {
+    private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
 
     public RaphusCucullatusEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
@@ -20,10 +26,10 @@ public class RaphusCucullatusEntity extends Animal {
     }
 
     protected void registerGoals() {
-        this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(0, new WaterAvoidingRandomStrollGoal(this,1.1D));
-        this.goalSelector.addGoal(0, new LookAtPlayerGoal(this, Player.class, 3f));
-        this.goalSelector.addGoal(0, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(2, new FloatGoal(this));
+        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this,1.1D));
+        this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 3f));
+        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
     }
 
 
@@ -34,9 +40,21 @@ public class RaphusCucullatusEntity extends Animal {
                 .add(Attributes.FOLLOW_RANGE, 10D);
     }
 
+
+
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return null;
+        return ModEntities.RAPHUSCUCULLATUS.get().create(level());
+    }
+
+    @Override
+    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
+
+    }
+
+    @Override
+    public AnimatableInstanceCache getAnimatableInstanceCache() {
+        return cache;
     }
 }

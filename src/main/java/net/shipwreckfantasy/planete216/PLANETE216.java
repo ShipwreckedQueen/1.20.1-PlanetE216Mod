@@ -16,9 +16,11 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.shipwreckfantasy.planete216.block.ModBlocks;
+import net.shipwreckfantasy.planete216.entity.ModEntity;
 import net.shipwreckfantasy.planete216.item.ModCreativeModeTabs;
 import net.shipwreckfantasy.planete216.item.ModItems;
 import org.slf4j.Logger;
+import software.bernie.geckolib.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(PLANETE216.MOD_ID)
@@ -38,6 +40,8 @@ public class PLANETE216
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
+        ModEntity.register(modEventBus);
+
         ModCreativeModeTabs.register(modEventBus);
 
 
@@ -45,6 +49,8 @@ public class PLANETE216
 
 
         modEventBus.addListener(this::addCreative);
+
+        GeckoLib.initialize();
 
     }
 

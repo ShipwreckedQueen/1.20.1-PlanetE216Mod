@@ -26,10 +26,10 @@ public class ModCreativeModeTabs {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> E216_CREATURES = E126_CREATIVE_MODE_TAB.register("e216_creatures",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DODOEGG.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DODOSPAWNEGG.get()))
                     .title(Component.translatable("creativetab.creatures"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.DODOEGG.get());
+                        pOutput.accept(ModItems.DODOSPAWNEGG.get());
                     })
                     .build());
 

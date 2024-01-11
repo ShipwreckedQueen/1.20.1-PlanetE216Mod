@@ -13,22 +13,22 @@ import software.bernie.geckolib.model.data.EntityModelData;
 public class RaphusCucullatusModel extends GeoModel<RaphusCucullatusEntity> {
     @Override
     public ResourceLocation getModelResource(RaphusCucullatusEntity animatable) {
-        return new ResourceLocation(PLANETE216.MOD_ID,"geo/raphuscucullatus.geo.json");
+        return new ResourceLocation(PLANETE216.MOD_ID,"geo/raphus_cucullatus.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(RaphusCucullatusEntity animatable) {
-        return new ResourceLocation(PLANETE216.MOD_ID,"textures/entity/raphus_cucullatus_sandy_texture.png");
+        return new ResourceLocation(PLANETE216.MOD_ID,"textures/entity/raphus_cucullatus_texture.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(RaphusCucullatusEntity animatable) {
-        return new ResourceLocation(PLANETE216.MOD_ID,"animations/raphuscucullatus.animation.json");
+        return new ResourceLocation(PLANETE216.MOD_ID,"animations/raphus_cucullatus.animation.json");
     }
 
     @Override
     public void setCustomAnimations(RaphusCucullatusEntity animatable, long instanceId, AnimationState<RaphusCucullatusEntity> animationState) {
-        CoreGeoBone head = getAnimationProcessor().getBone("head");
+        CoreGeoBone head = getAnimationProcessor().getBone("Head");
         if (head != null) {
             EntityModelData entityData = animationState.getData(DataTickets.ENTITY_MODEL_DATA);
 

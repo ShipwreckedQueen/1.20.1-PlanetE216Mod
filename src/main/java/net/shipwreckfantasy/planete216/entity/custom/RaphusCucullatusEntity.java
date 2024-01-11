@@ -39,7 +39,7 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 4.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.15D)
+                .add(Attributes.MOVEMENT_SPEED, 0.13D)
                 .add(Attributes.FOLLOW_RANGE, 10D);
     }
 

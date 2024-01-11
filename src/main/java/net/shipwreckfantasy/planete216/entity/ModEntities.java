@@ -14,8 +14,8 @@ public class ModEntities {
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, PLANETE216.MOD_ID);
 
     public static final RegistryObject<EntityType<RaphusCucullatusEntity>> RAPHUSCUCULLATUS =
-            ENTITY_TYPES.register("raphuscucullatus", () -> EntityType.Builder.of(RaphusCucullatusEntity::new, MobCategory.CREATURE)
-                    .sized(0.5f,0.5f).build("raphuscucullatus"));
+            ENTITY_TYPES.register("raphus_cucullatus", () -> EntityType.Builder.of(RaphusCucullatusEntity::new, MobCategory.CREATURE)
+                    .sized(0.5f,0.5f).build("raphus_cucullatus"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

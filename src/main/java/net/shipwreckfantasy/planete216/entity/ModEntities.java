@@ -15,7 +15,7 @@ public class ModEntities {
 
     public static final RegistryObject<EntityType<RaphusCucullatusEntity>> RAPHUSCUCULLATUS =
             ENTITY_TYPES.register("raphus_cucullatus", () -> EntityType.Builder.of(RaphusCucullatusEntity::new, MobCategory.CREATURE)
-                    .sized(0.5f,0.5f).build("raphus_cucullatus"));
+                    .sized(0.6f,0.6f).build("raphus_cucullatus"));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

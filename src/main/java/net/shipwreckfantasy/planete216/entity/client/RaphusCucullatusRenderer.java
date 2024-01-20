@@ -17,7 +17,7 @@ public class RaphusCucullatusRenderer extends GeoEntityRenderer<RaphusCucullatus
 
     @Override
     public ResourceLocation getTextureLocation(RaphusCucullatusEntity animatable) {
-        return new ResourceLocation(PLANETE216.MOD_ID,"textures/entity/raphuscucullatustexture.png");
+        return new ResourceLocation(PLANETE216.MOD_ID,"textures/entity/raphus_cucullatus_texture.png");
     }
 
     @Override

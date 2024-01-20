@@ -2,15 +2,12 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "planete216:block/portal_core_block_texture",
-		"particle": "planete216:block/portal_core_block_texture"
+		"1": "planete216:block/portal_core_block_texture"
 	},
 	"elements": [
 		{
-			"name": "VoxylShape",
 			"from": [6, 0, 6],
 			"to": [10, 16, 10],
-			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0, 6]},
 			"faces": {
 				"north": {"uv": [0, 0, 2, 8], "texture": "#1"},
 				"east": {"uv": [2, 0, 4, 8], "texture": "#1"},
@@ -23,39 +20,27 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [0, -30, 1],
-			"translation": [-0.25, -0.25, 0.25],
-			"scale": [0.3, 0.3, 0.3]
+			"scale": [0.4, 0.4, 0.4]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [0, -34, 1],
-			"translation": [-0.25, -0.25, 0.25],
-			"scale": [0.3, 0.3, 0.3]
+			"scale": [0.4, 0.4, 0.4]
 		},
 		"firstperson_righthand": {
-			"rotation": [1, 1, 1],
-			"translation": [3.5, 0.25, 0.25],
-			"scale": [0.5, 0.5, 0.4]
+			"rotation": [0, 47, 10],
+			"translation": [2.75, -0.75, 0.5],
+			"scale": [0.6, 0.6, 0.6]
 		},
 		"firstperson_lefthand": {
-			"rotation": [1, 1, 1],
-			"translation": [3.5, -0.25, -0.25],
-			"scale": [0.5, 0.5, 0.4]
+			"rotation": [0, 47, 10],
+			"translation": [2.75, -0.75, 0.5],
+			"scale": [0.6, 0.6, 0.6]
 		},
 		"ground": {
-			"translation": [0, 1.25, 0],
-			"scale": [0.45, 0.45, 0.45]
+			"scale": [0.4, 0.4, 0.4]
 		},
 		"gui": {
-			"rotation": [27, 35, 0],
-			"scale": [0.8, 0.8, 0.8]
-		},
-		"head": {
-			"scale": [0.82, 0.82, 0.82]
-		},
-		"fixed": {
-			"translation": [0, 0, -0.25],
-			"scale": [0.6, 0.6, 0.6]
+			"rotation": [24, 64, 0],
+			"scale": [0.9, 0.9, 0.9]
 		}
 	}
 }

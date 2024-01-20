@@ -1,5 +1,6 @@
 package net.shipwreckfantasy.planete216.entity.client;
 
+import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.shipwreckfantasy.planete216.PLANETE216;
@@ -11,6 +12,7 @@ import software.bernie.geckolib.model.GeoModel;
 import software.bernie.geckolib.model.data.EntityModelData;
 
 public class RaphusCucullatusModel extends GeoModel<RaphusCucullatusEntity> {
+
     @Override
     public ResourceLocation getModelResource(RaphusCucullatusEntity animatable) {
         return new ResourceLocation(PLANETE216.MOD_ID,"geo/raphus_cucullatus.geo.json");

@@ -15,6 +15,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.shipwreckfantasy.planete216.block.ModBlocks;
+import net.shipwreckfantasy.planete216.datagen.ModItemModelProvider;
 import net.shipwreckfantasy.planete216.entity.ModEntities;
 import net.shipwreckfantasy.planete216.entity.client.RaphusCucullatusRenderer;
 import net.shipwreckfantasy.planete216.item.ModCreativeModeTabs;

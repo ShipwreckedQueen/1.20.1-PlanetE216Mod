@@ -40,20 +40,20 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
 
     protected void registerGoals() {
         this.goalSelector.addGoal(2, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.1D));
+        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 3f));
-        this.goalSelector.addGoal(3, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(1, new BreedGoal(this, 1.2D));
+        this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(1, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(1, new PanicGoal(this, 1.4D));
-        this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.14D));
-        this.goalSelector.addGoal(0, new TemptGoal(this,1.2D,Ingredient.of(Items.SWEET_BERRIES),false));
+        this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.1D));
+        this.goalSelector.addGoal(0, new TemptGoal(this,1.0D,Ingredient.of(Items.SWEET_BERRIES),false));
     }
 
 
     public static AttributeSupplier.Builder createAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 4.0D)
-                .add(Attributes.MOVEMENT_SPEED, 1.14D)
+                .add(Attributes.MOVEMENT_SPEED, 0.2D)
                 .add(Attributes.FOLLOW_RANGE, 8D);
 
     }

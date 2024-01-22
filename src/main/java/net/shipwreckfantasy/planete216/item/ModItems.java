@@ -19,8 +19,8 @@ public class ModItems {
     public static final RegistryObject<Item> PORTALSHARDS = ITEMS.register("portal_shards",
             () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> DODOSPAWNEGG = ITEMS.register("dodoegg",
-            () -> new ForgeSpawnEggItem(ModEntities.RAPHUSCUCULLATUS, 0xD57E36, 0x1D0D00,
+    public static final RegistryObject<Item> DODOSPAWNEGG = ITEMS.register("dodo_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.RAPHUSCUCULLATUS, 0xEDC343, 0xC1A76A,
                     new Item.Properties()));
 
     public static void register(IEventBus eventBus) {

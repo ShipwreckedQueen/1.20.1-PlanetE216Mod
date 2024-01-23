@@ -31,8 +31,9 @@ import software.bernie.geckolib.core.object.PlayState;
 
 
 public class RaphusCucullatusEntity extends Animal implements GeoEntity {
+
+    private PanicGoal panicGoal;
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
-    public float fall;
 
 
     public RaphusCucullatusEntity(EntityType<? extends Animal> pEntityType, Level pLevel) {
@@ -45,9 +46,14 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 3f));
         this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(0, new BreedGoal(this, 1.0D));
-        this.goalSelector.addGoal(1, new PanicGoal(this, 1.2D));
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 0.9D));
         this.goalSelector.addGoal(1, new TemptGoal(this,0.9D,Ingredient.of(Items.SWEET_BERRIES),false));
+        panicGoal = new PanicGoal(this, 1.4D);
+        this.goalSelector.addGoal(0, panicGoal);
+    }
+
+    public PanicGoal getPanicGoal() {
+        return panicGoal;
     }
 
 
@@ -79,7 +85,13 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
 
     private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> AnimationState) {
         if (AnimationState.isMoving()) {
-            AnimationState.getController().setAnimation(RawAnimation.begin().then("walk.model.new", Animation.LoopType.LOOP));
+            PanicGoal panicGoal = getPanicGoal();
+            if (panicGoal != null && panicGoal.isRunning()) {
+                AnimationState.getController().setAnimation(RawAnimation.begin().then("run.model.new", Animation.LoopType.LOOP));
+            }
+            else {
+                AnimationState.getController().setAnimation(RawAnimation.begin().then("walk.model.new", Animation.LoopType.LOOP));
+            }
             return PlayState.CONTINUE;
         }
         AnimationState.getController().setAnimation(RawAnimation.begin().then("idle.model.new", Animation.LoopType.LOOP));

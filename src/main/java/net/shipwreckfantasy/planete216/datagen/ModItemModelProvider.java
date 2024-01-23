@@ -13,6 +13,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        withExistingParent(ModItems.DODOSPAWNEGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+        withExistingParent(ModItems.DODO_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 }

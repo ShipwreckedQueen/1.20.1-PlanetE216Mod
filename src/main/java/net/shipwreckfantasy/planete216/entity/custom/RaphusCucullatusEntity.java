@@ -19,6 +19,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.shipwreckfantasy.planete216.entity.ModEntities;
+import net.shipwreckfantasy.planete216.entity.modgoals.Dodo_PanicGoal;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
 import software.bernie.geckolib.core.animatable.GeoAnimatable;
@@ -31,8 +32,6 @@ import software.bernie.geckolib.core.object.PlayState;
 
 
 public class RaphusCucullatusEntity extends Animal implements GeoEntity {
-
-    private PanicGoal panicGoal;
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
 
@@ -42,18 +41,13 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
 
     protected void registerGoals() {
         this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(1, new WaterAvoidingRandomStrollGoal(this, 0.9D));
+        this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 0.8D));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 3f));
         this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
-        this.goalSelector.addGoal(0, new BreedGoal(this, 1.0D));
-        this.goalSelector.addGoal(3, new FollowParentGoal(this, 0.9D));
-        this.goalSelector.addGoal(1, new TemptGoal(this,0.9D,Ingredient.of(Items.SWEET_BERRIES),false));
-        panicGoal = new PanicGoal(this, 1.4D);
-        this.goalSelector.addGoal(0, panicGoal);
-    }
-
-    public PanicGoal getPanicGoal() {
-        return panicGoal;
+        this.goalSelector.addGoal(1, new BreedGoal(this, 1.0D));
+        this.goalSelector.addGoal(3, new FollowParentGoal(this, 0.8D));
+        this.goalSelector.addGoal(2, new TemptGoal(this,0.8D,Ingredient.of(Items.SWEET_BERRIES),false));
+        this.goalSelector.addGoal(0, new Dodo_PanicGoal(this,1.4D));
     }
 
 
@@ -85,20 +79,12 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
 
     private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> AnimationState) {
         if (AnimationState.isMoving()) {
-            PanicGoal panicGoal = getPanicGoal();
-            if (panicGoal != null && panicGoal.isRunning()) {
-                AnimationState.getController().setAnimation(RawAnimation.begin().then("run.model.new", Animation.LoopType.LOOP));
-            }
-            else {
-                AnimationState.getController().setAnimation(RawAnimation.begin().then("walk.model.new", Animation.LoopType.LOOP));
-            }
+            AnimationState.getController().setAnimation(RawAnimation.begin().then("walk.model.new", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;
         }
         AnimationState.getController().setAnimation(RawAnimation.begin().then("idle.model.new", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
-
-
 
 
 

@@ -7,6 +7,8 @@ import net.minecraft.client.animation.KeyframeAnimations;
 
 public class ModAnimationsDefinitions {
 
+
+
     public static final AnimationDefinition IDLE_MODEL_NEW = AnimationDefinition.Builder.withLength(2.5f).looping()
             .addAnimation("HeadandNeck",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,

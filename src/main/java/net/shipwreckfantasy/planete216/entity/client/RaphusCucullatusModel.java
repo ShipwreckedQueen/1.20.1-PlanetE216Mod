@@ -15,17 +15,17 @@ public class RaphusCucullatusModel extends GeoModel<RaphusCucullatusEntity> {
 
     @Override
     public ResourceLocation getModelResource(RaphusCucullatusEntity animatable) {
-        return new ResourceLocation(PLANETE216.MOD_ID,"geo/raphus_cucullatus.geo.json");
+        return new ResourceLocation(PLANETE216.MOD_ID,"geo/raphuscucullatus.geo.json");
     }
 
     @Override
     public ResourceLocation getTextureResource(RaphusCucullatusEntity animatable) {
-        return new ResourceLocation(PLANETE216.MOD_ID,"textures/entity/raphus_cucullatus_texture.png");
+        return new ResourceLocation(PLANETE216.MOD_ID,"textures/entity/raphuscucullatus_texture.png");
     }
 
     @Override
     public ResourceLocation getAnimationResource(RaphusCucullatusEntity animatable) {
-        return new ResourceLocation(PLANETE216.MOD_ID,"animations/raphus_cucullatus.animation.json");
+        return new ResourceLocation(PLANETE216.MOD_ID,"animations/raphuscucullatus.animation.json");
     }
 
     @Override

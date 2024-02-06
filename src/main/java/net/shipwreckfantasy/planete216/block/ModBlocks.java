@@ -23,7 +23,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOWFERN = registerBlock("yellow_fern",
             () -> new YellowFern(BlockBehaviour.Properties.copy(Blocks.GRASS)));
 
-    public static final RegistryObject<Block> METALPORTALBLOCK = registerBlock("portal_frame_block",
+    public static final RegistryObject<Block> PORTALFRAMEBLOCK = registerBlock("portal_frame_block",
             () -> new PortalFrameBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f).sound(SoundType.ANCIENT_DEBRIS)));
 
     public static final RegistryObject<Block> PORTALCOREBLOCK = registerBlock("portal_core_block",

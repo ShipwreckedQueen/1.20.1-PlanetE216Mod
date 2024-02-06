@@ -34,10 +34,10 @@ public class ModCreativeModeTabs {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> E216_BULDING_BLOCKS = E126_CREATIVE_MODE_TAB.register("e216_buidling_blocks",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.METALPORTALBLOCK.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.PORTALFRAMEBLOCK.get()))
                     .title(Component.translatable("creativetab.building"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModBlocks.METALPORTALBLOCK.get());
+                        pOutput.accept(ModBlocks.PORTALFRAMEBLOCK.get());
                         pOutput.accept(ModBlocks.PORTALCOREBLOCK.get());
                     })
                     .build());

@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+  ],
   "key": {
     "#": {
       "item": "planete216:portal_shards"
-    },
-    "pattern": [
-      "###",
-      "# #",
-      "###"
-    ],
-    "result": {
-      "item": "planete216:portal_core_block"
     }
+  },
+  "result": {
+    "item": "planete216:portal_core_block",
+    "count": 1
   }
 }

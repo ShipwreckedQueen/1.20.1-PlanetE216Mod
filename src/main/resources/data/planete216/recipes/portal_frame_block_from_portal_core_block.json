@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "pattern": [
+    "iii",
+    "i#i",
+    "iii"
+  ],
   "key": {
     "#": {
       "item": "planete216:portal_core_block"
     },
     "i": {
       "item": "minecraft:iron_ingot"
-    },
-    "pattern": [
-      "iii",
-      "i#i",
-      "iii"
-    ],
-    "result": {
-      "item": "planete216:portal_frame_block"
     }
+  },
+  "result": {
+    "item": "planete216:portal_frame_block",
+    "count": 1
   }
 }

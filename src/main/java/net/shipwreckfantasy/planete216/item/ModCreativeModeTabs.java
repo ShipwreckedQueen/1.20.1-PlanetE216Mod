@@ -37,8 +37,8 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.PORTALFRAMEBLOCK.get()))
                     .title(Component.translatable("creativetab.building"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModBlocks.PORTALFRAMEBLOCK.get());
                         pOutput.accept(ModBlocks.PORTALCOREBLOCK.get());
+                        pOutput.accept(ModBlocks.PORTALFRAMEBLOCK.get());
                     })
                     .build());
 

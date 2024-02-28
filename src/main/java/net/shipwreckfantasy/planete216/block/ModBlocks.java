@@ -26,7 +26,7 @@ public class ModBlocks {
             () -> new PortalCoreBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f).sound(SoundType.GLASS)));
 
     public static final RegistryObject<Block> PORTALFRAMEBLOCK = registerBlock("portal_frame_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f).sound(SoundType.GLASS)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f).sound(SoundType.METAL)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

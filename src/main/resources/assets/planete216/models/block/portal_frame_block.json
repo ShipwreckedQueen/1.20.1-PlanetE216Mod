@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "portal_frame_block_texture",
+		"0": "planete216:block/portal_frame_block_texture",
 		"particle": "planete216:block/portal_frame_block_texture"
 	},
 	"elements": [

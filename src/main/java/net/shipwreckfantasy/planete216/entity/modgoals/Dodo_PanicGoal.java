@@ -18,6 +18,10 @@ public class Dodo_PanicGoal extends PanicGoal implements GeoAnimatable {
         return isRunning;
     }
 
+    public Dodo_PanicGoal(PathfinderMob pMob, double pSpeedModifier) {
+        super(pMob, pSpeedModifier);
+    }
+
     @Override
     public void start() {
         super.start();
@@ -29,24 +33,6 @@ public class Dodo_PanicGoal extends PanicGoal implements GeoAnimatable {
         super.stop();
         isRunning = false;
     }
-
-    public Dodo_PanicGoal(PathfinderMob pMob, double pSpeedModifier) {
-        super(pMob, pSpeedModifier);
-    }
-
-    public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "controller", 0, this::predicate));
-    }
-
-    private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> AnimationState) {
-        if (this.isRunning) {
-            AnimationState.getController().setAnimation(RawAnimation.begin().then("run.model.new", Animation.LoopType.LOOP));
-            return PlayState.CONTINUE;
-        }
-        AnimationState.getController().setAnimation(RawAnimation.begin().then("idle.model.new", Animation.LoopType.LOOP));
-        return PlayState.CONTINUE;
-    }{
-}
 
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {return cache;}

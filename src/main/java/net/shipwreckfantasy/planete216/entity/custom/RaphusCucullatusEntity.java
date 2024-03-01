@@ -30,6 +30,8 @@ import software.bernie.geckolib.core.animation.*;
 import software.bernie.geckolib.core.animation.AnimationState;
 import software.bernie.geckolib.core.object.PlayState;
 
+import java.util.Random;
+
 
 public class RaphusCucullatusEntity extends Animal implements GeoEntity {
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
@@ -46,6 +48,7 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
         this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.0D));
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 0.8D));
+        this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, LivingEntity.class, 8.0F, 1.6D, 1.4D, (livingEntity) -> livingEntity.is(this.getLastHurtByMob())));
         this.goalSelector.addGoal(2, new TemptGoal(this,0.8D,Ingredient.of(Items.SWEET_BERRIES),false));
         this.goalSelector.addGoal(0, new Dodo_PanicGoal(this,1.4D));
     }

@@ -1,6 +1,7 @@
 package net.shipwreckfantasy.planete216.entity.custom;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
@@ -18,7 +19,9 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.shipwreckfantasy.planete216.PLANETE216;
 import net.shipwreckfantasy.planete216.entity.ModEntities;
+import net.shipwreckfantasy.planete216.entity.client.RaphusCucullatusModel;
 import net.shipwreckfantasy.planete216.entity.modgoals.Dodo_PanicGoal;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
@@ -50,7 +53,7 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
         this.goalSelector.addGoal(3, new FollowParentGoal(this, 0.8D));
         this.goalSelector.addGoal(4, new AvoidEntityGoal<>(this, LivingEntity.class, 8.0F, 1.6D, 1.4D, (livingEntity) -> livingEntity.is(this.getLastHurtByMob())));
         this.goalSelector.addGoal(2, new TemptGoal(this,0.8D,Ingredient.of(Items.SWEET_BERRIES),false));
-        this.goalSelector.addGoal(0, new PanicGoal(this,1.4D));
+        this.goalSelector.addGoal(0, new Dodo_PanicGoal(this,1.4D));
     }
 
 
@@ -68,6 +71,7 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
     public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
         return ModEntities.RAPHUSCUCULLATUS.get().create(level());
     }
+
 
 
     @Override
@@ -89,19 +93,6 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
         return PlayState.CONTINUE;
     }
 
-    private PlayState shouldPanicpredicate(AnimationState<Dodo_PanicGoal> dodoPanicGoalAnimationState) {
-        if (dodoPanicGoalAnimationState.isMoving()) {
-            dodoPanicGoalAnimationState.getController().setAnimation(RawAnimation.begin().then("run.model.new", Animation.LoopType.LOOP));
-            return PlayState.CONTINUE;
-        } else {
-            dodoPanicGoalAnimationState.getController().setAnimation(RawAnimation.begin().then("idle.model.new", Animation.LoopType.LOOP));
-            return PlayState.CONTINUE;
-        }
-    }
-
-
-
-
     @Override
     public AnimatableInstanceCache getAnimatableInstanceCache() {
         return cache;
@@ -113,6 +104,7 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
         return super.getHurtSound(pDamageSource);
     }
 }
+
 
 
 

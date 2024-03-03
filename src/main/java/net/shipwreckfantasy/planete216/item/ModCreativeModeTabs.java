@@ -30,6 +30,7 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.creatures"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.RAPHUSCUCULLATUS_SPAWN_EGG.get());
+                        pOutput.accept(ModBlocks.FERTILIZEDDODOEGG.get());
                     })
                     .build());
 

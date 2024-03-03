@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.shipwreckfantasy.planete216.PLANETE216;
+import net.shipwreckfantasy.planete216.block.custom.DodoEgg;
 import net.shipwreckfantasy.planete216.block.custom.PortalCoreBlock;
 import net.shipwreckfantasy.planete216.block.custom.YellowFern;
 import net.shipwreckfantasy.planete216.item.ModItems;
@@ -27,6 +28,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PORTALFRAMEBLOCK = registerBlock("portal_frame_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f).sound(SoundType.METAL)));
+
+    public static final RegistryObject<Block> FERTILIZEDDODOEGG= registerBlock("fertilized_dodo-egg",
+            () -> new DodoEgg(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).strength(0.5f).sound(SoundType.BONE_BLOCK)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -13,5 +13,6 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void entityAttribiteEvent(EntityAttributeCreationEvent event) {
         event.put(ModEntities.RAPHUSCUCULLATUS.get(), RaphusCucullatusEntity.createAttributes().build());
+        event.put(ModEntities.BABYRAPHUSCUCULLATUS.get(), RaphusCucullatusEntity.createAttributes().build());
     }
 }

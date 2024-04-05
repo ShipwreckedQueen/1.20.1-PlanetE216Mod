@@ -1,7 +1,6 @@
 package net.shipwreckfantasy.planete216;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.*;
 import net.minecraftforge.api.distmarker.Dist;
@@ -15,9 +14,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.shipwreckfantasy.planete216.block.ModBlocks;
-import net.shipwreckfantasy.planete216.datagen.ModItemModelProvider;
 import net.shipwreckfantasy.planete216.entity.ModEntities;
-import net.shipwreckfantasy.planete216.entity.client.BabyRaphusCucullatusRenderer;
 import net.shipwreckfantasy.planete216.entity.client.RaphusCucullatusRenderer;
 import net.shipwreckfantasy.planete216.item.ModCreativeModeTabs;
 import net.shipwreckfantasy.planete216.item.ModItems;

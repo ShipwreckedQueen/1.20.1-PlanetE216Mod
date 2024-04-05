@@ -69,7 +69,7 @@ public class RaphusCucullatusEntity extends Animal implements GeoEntity {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel pLevel, AgeableMob pOtherParent) {
-        return ModEntities.BABYRAPHUSCUCULLATUS.get().create(level());
+        return ModEntities.RAPHUSCUCULLATUS.get().create(level());
     }
 
 

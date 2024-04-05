@@ -29,7 +29,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> PORTALFRAMEBLOCK = registerBlock("portal_frame_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(4f).sound(SoundType.METAL)));
 
-    public static final RegistryObject<Block> FERTILIZEDDODOEGG= registerBlock("fertilized_dodo-egg",
+    public static final RegistryObject<Block> FERTILIZEDDODOEGG= registerBlock("fertilized_dodo_egg",
             () -> new DodoEgg(BlockBehaviour.Properties.copy(Blocks.TURTLE_EGG).strength(0.5f).sound(SoundType.BONE_BLOCK)));
 
 

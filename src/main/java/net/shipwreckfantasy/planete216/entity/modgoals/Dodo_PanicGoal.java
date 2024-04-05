@@ -30,16 +30,14 @@ public class Dodo_PanicGoal extends PanicGoal implements GeoAnimatable {
 
     @Override
     public void registerControllers(AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new AnimationController<>(this, "paniccontroller", 0, this::shouldPanicpredicate));
+        controllers.add(new AnimationController<>(this, "paniccontroller", 10, this::shouldPanicpredicate));
     }
-
     private PlayState shouldPanicpredicate(AnimationState<Dodo_PanicGoal> dodoPanicGoalAnimationState) {
         if (dodoPanicGoalAnimationState.isMoving()) {
             dodoPanicGoalAnimationState.getController().setAnimation(RawAnimation.begin().then("run.model.new", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;
         } else {
-            dodoPanicGoalAnimationState.getController().setAnimation(RawAnimation.begin().then("idle.model.new", Animation.LoopType.LOOP));
-            return PlayState.CONTINUE;
+            return PlayState.STOP;
         }
     }
 

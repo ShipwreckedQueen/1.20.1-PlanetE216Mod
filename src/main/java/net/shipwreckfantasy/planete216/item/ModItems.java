@@ -24,10 +24,6 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.RAPHUSCUCULLATUS, 0xEDC343, 0xC1A76A,
                     new Item.Properties()));
 
-    public static final RegistryObject<Item> BABYRAPHUSCUCULLATUS_SPAWN_EGG = ITEMS.register("baby_raphuscucullatus_spawn_egg",
-            () -> new ForgeSpawnEggItem(ModEntities.BABYRAPHUSCUCULLATUS, 0xEDC343, 0xC1A76A,
-                    new Item.Properties()));
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

@@ -16,7 +16,7 @@ public class JavaRaphusCucullatusRenderer extends MobRenderer<JavaRaphusCucullat
 
     @Override
     public ResourceLocation getTextureLocation(JavaRaphusCucullatusEntity pEntity) {
-        return new ResourceLocation(PLANETE216.MOD_ID, "textures/entity/java_raphus_cuculatus_texture.png");
+        return new ResourceLocation(PLANETE216.MOD_ID, "textures/entity/raphus_cuculatus_texture_java.png");
     }
 
     @Override

@@ -16,7 +16,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.shipwreckfantasy.planete216.block.ModBlocks;
 import net.shipwreckfantasy.planete216.entity.ModEntities;
 import net.shipwreckfantasy.planete216.entity.client.JavaRaphusCucullatusRenderer;
-import net.shipwreckfantasy.planete216.entity.client.RaphusCucullatusRenderer;
 import net.shipwreckfantasy.planete216.item.ModCreativeModeTabs;
 import net.shipwreckfantasy.planete216.item.ModItems;
 import org.slf4j.Logger;
@@ -77,7 +76,6 @@ public class PLANETE216
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(ModEntities.RAPHUSCUCULLATUS.get(), RaphusCucullatusRenderer::new);
             EntityRenderers.register(ModEntities.JAVARAPHUSCUCULLATUS.get(), JavaRaphusCucullatusRenderer::new);
         }
     }
